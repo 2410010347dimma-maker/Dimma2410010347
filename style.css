@@ -1,0 +1,230 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background-color: #fdf0f3; /* pink muda lembut */
+    color: #3d2a2e; /* coklat tua lembut untuk teks */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background-color: #ffcad4; /* pink muda */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #b23a48; /* pink tua */
+}
+
+.header .user-info {
+    display: flex;
+    align-items: center;
+    color: #b23a48;
+}
+
+.header .user-info span {
+    margin-right: 1rem;
+}
+
+.logout-btn {
+    padding: 0.5rem 1rem;
+    background-color: #b23a48; /* pink tua */
+    color: #fff;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background-color: #e5989b; /* pink pastel lembut */
+    color: #3d2a2e;
+}
+
+/* ===== SIDEBAR ===== */
+.container {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f9dcc4; /* coklat muda lembut */
+    color: #3d2a2e;
+    padding: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: inset -1px 0 4px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #b23a48; /* pink tua */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #3d2a2e;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #ffb3c6; /* pink pastel terang */
+    color: #3d2a2e;
+}
+
+.menu-item i {
+    margin-right: 0.75rem;
+    width: 20px;
+    text-align: center;
+    color: #b23a48;
+    transition: color 0.3s ease;
+}
+
+.menu-item:hover i {
+    color: #3d2a2e;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background-color: #ffe5ec; /* pink sangat muda */
+}
+
+.content-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #b23a48;
+    margin-bottom: 1.5rem;
+}
+
+.content-wrapper {
+    background-color: #f9dcc4; /* coklat muda */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== STAT CARDS ===== */
+.stats-grid {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-card {
+    border-left: 6px solid;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-blue {
+    border-color: #b23a48;
+    color: #b23a48;
+}
+
+.card-green {
+    border-color: #e5989b;
+    color: #3d2a2e;
+}
+
+.card-yellow {
+    border-color: #f9dcc4;
+    color: #3d2a2e;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #ffcad4;
+    text-align: center;
+    padding: 1rem;
+    color: #b23a48;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== GALERI ===== */
+.galeri-container {
+    text-align: center;
+    background-color: #f8edeb; /* pink muda */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#gambarBesar {
+    max-width: 500px;
+    height: auto;
+    border: 5px solid #b23a48;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.thumbnails img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    margin: 5px;
+    cursor: pointer;
+    border: 2px solid #f9dcc4;
+    border-radius: 5px;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.thumbnails img:hover {
+    border-color: #b23a48;
+    transform: scale(1.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
